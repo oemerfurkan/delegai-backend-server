@@ -8,6 +8,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+# Define the API endpoint to handle POST requests
+@app.route('/', methods=['POST'])
+def scrape_cooked_text_api():
+    return "Hello"
 
 # Define the API endpoint to handle POST requests
 @app.route('/get_tendancy', methods=['POST'])
