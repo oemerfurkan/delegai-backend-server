@@ -9,11 +9,6 @@ app = Flask(__name__)
 CORS(app)
 
 # Define the API endpoint to handle POST requests
-@app.route('/', methods=['POST'])
-def scrape_cooked_text_api():
-    return "Hello"
-
-# Define the API endpoint to handle POST requests
 @app.route('/get_tendancy', methods=['POST'])
 def scrape_cooked_text_api():
     data = request.json  # Assuming JSON data with a "url" field containing the target URL
